@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+
+@theme {
+    --background-color-blue-500: hsl(233, 67%, 56%);
+    --background-color-blue-700: hsl(248, 70%, 36%);
+    --background-color-neutral-900: hsl(243, 96%, 9%);
+    --background-color-neutral-800: hsl(243, 27%, 20%);
+    --background-color-neutral-700: hsl(243, 23%, 24%);
+    --background-color-neutral-600: hsl(243, 23%, 30%);
+    --background-color-neutral-300: hsl(240, 6%, 70%);
+
+}
+
+body {
+    background-color: hsl(243, 96%, 9%);
+    max-width: 375px;
+    width: 100%;
+    margin:auto;
+    color: hsl(0, 0%, 100%);
+}
+.bg-weather {
+    background-image: url('./assets/images/bg-today-small.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 1280px) {
+    body {
+        min-width: 1280px;
+        margin: auto;
+    }
+    .bg-weather {
+        background-image: url('./assets/images/bg-today-large.svg');
+    }
+}
+
