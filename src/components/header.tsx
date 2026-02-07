@@ -3,6 +3,7 @@ import type { HeaderProps } from "../types/types";
 
 const Header: React.FC<HeaderProps> = ({unit, setUnit}) => {
     const handleUnits = (e: any) => {
+      if(setUnit)
     setUnit(e.target.value);
   }
   return (

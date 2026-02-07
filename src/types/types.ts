@@ -44,6 +44,6 @@ export type Place = {
 }
 
 export type HeaderProps = {
-  unit: string;
-  setUnit: (u: string) => void;
+  unit?: string;
+  setUnit?: (u: string) => void;
 };

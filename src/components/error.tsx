@@ -9,7 +9,7 @@ const Error = () => {
   }
   return (
     <>
-    <Header />
+    <Header/>
     <div className='flex flex-col text-center items-center mt-35'>
     <img src={errorImage} alt="logo" className="w-10 mb-8"/>
         <h1 className='text-5xl font-bold'>Something went wrong</h1>

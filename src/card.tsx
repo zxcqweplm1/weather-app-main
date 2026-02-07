@@ -111,9 +111,9 @@ export const Card = ({ data, loading, unit }: CardProps) => {
               <DailyCard
                 key={i}
                 label={formatDay(data.daily?.time[i])}
-                max={getWholeNumber(data.daily?.temperature_2m_max[i])}
-                min={getWholeNumber(data.daily?.temperature_2m_min[i])}
-                icon={weatherIcons(data.daily?.weather_code[i])}
+                max={getWholeNumber(data.daily?.temperature_2m_max?.[i])}
+                min={getWholeNumber(data.daily?.temperature_2m_min?.[i])}
+                icon={weatherIcons(data.daily?.weather_code?.[i])}
               />
             ))}
         </section>
@@ -141,10 +141,10 @@ export const Card = ({ data, loading, unit }: CardProps) => {
               key={`${selectedDay}-${i}`}
               label={formatHour(time)}
               temperature={getWholeNumber(
-                data.hourly?.temperature_2m[selectedDay * 24 + i],
+                data.hourly?.temperature_2m?.[selectedDay * 24 + i],
               )}
               icon={weatherIcons(
-                data.hourly?.weather_code[selectedDay * 24 + i],
+                data.hourly?.weather_code?.[selectedDay * 24 + i],
               )}
             />
           ))}
